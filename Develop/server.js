@@ -10,6 +10,7 @@ app.use(express.json());
 
 //Tells server how to respond when user visits certain pages
 require('./routes/htmlRoutes')(app);
+require('./routes/apiRoutes')(app);
 //start server
 app.listen(PORT, () => {
     console.log(`now listening on http://localhost:${PORT}`)

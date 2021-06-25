@@ -5,7 +5,8 @@ const express = require('express')
 const router = express.Router()
 
 //import functions from store
-import { getNotes, addNotes} from ('../db/store');
+getNotes = require('../db/store')
+addNotes = require('../db/store')
 
 //shows notes from db
 router.get('/notes', (req, res) => {
