@@ -14,7 +14,7 @@ router.get('/notes', (req, res) => {
     })
   });
 
-//route to add notes from db
+//middleware route to add notes from db
 router.post('/notes', (req, res) => {
     addNote(req.body)
       .then((note) => res.json(note))

@@ -12,7 +12,7 @@ app.use(express.json());
 require('./routes/htmlRoutes')(app);
 //tells app to use apiRoutes to connect to db
 const apiRoutes = require('./routes/apiRoutes')
-app.use('/api', apiRoutes);
+app.get('/api', apiRoutes);
 //start server
 app.listen(PORT, () => {
     console.log(`now listening on http://localhost:${PORT}`)
