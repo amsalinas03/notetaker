@@ -10,9 +10,9 @@ app.use(express.json());
 
 //Tells server how to respond when user visits certain pages
 require('./routes/htmlRoutes')(app);
-//tells app to use apiRoutes to connect to db
+//middleware tells app to use apiRoutes
 const apiRoutes = require('./routes/apiRoutes')
-app.get('/api', apiRoutes);
+app.use('/api', apiRoutes);
 //start server
 app.listen(PORT, () => {
     console.log(`now listening on http://localhost:${PORT}`)
