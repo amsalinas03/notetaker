@@ -7,12 +7,12 @@ const PORT = 8080;
 //Sets up express to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-//Tells server how to respond when user visits certain pages
-require('./routes/htmlRoutes')(app);
+app.use(express.static('public'))
 //middleware tells app to use apiRoutes
 const apiRoutes = require('./routes/apiRoutes')
 app.use('/api', apiRoutes);
+//Tells server how to respond when user visits certain pages
+require('./routes/htmlRoutes')(app);
 //start server
 app.listen(PORT, () => {
     console.log(`now listening on http://localhost:${PORT}`)
