@@ -13,7 +13,7 @@ To run the app locally, close the Gitbut url https://github.com/amsalinas03/note
 
    3. Run the node server to start the program locally
 ``` node server.js ```
-
+Alternatively, check out the Heroku deployed version https://notetakerexpresshw11.herokuapp.com/
 # Usage 
 This app can be used to write and save notes on your brower!
 
